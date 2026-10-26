@@ -2,6 +2,8 @@
 const nextConfig = {
   // Zelfstandige build voor een container (Azure App Service / Container Apps).
   output: 'standalone',
+  // ESLint wordt niet meegeleverd; niet laten meedraaien tijdens de build.
+  eslint: { ignoreDuringBuilds: true },
   experimental: {
     // Documenten (handleidingen, tekeningen) worden via een server action geüpload.
     serverActions: { bodySizeLimit: '25mb' },
